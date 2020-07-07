@@ -32,7 +32,11 @@ if (choice==2)
     printf("what is your salary?\n");
     printf("do you want to continue with your company?\n");
     }
-
+if (choice==3)
+    {printf("In which School?\n");
+    printf("what is your salary?\n");
+    printf("do you want to continue with your School?\n");
+    }
 getch();
 }
 /*
