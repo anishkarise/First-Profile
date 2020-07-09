@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 void main ()
-{int age=0,choice=0,salary=0;
- char company_name[20],y_n,school_name[30],hospital_name[30],youtube_channel_name[10],job_name[10],your_name[10];
+{int age=0,choice=0,salary=0,gender=0;
+ char company_name[20],y_n,school_name[30],hospital_name[30],youtube_channel_name[20],job_name[20],your_name[20];
  char buffer[1024];
 
 
@@ -47,7 +47,6 @@ else
         printf("%s",buffer);
         sprintf(buffer,"Enter you choice:");
         printf("%s",buffer);
-
         fgets(buffer,3,stdin);
         sscanf(buffer,"%d",&choice);
 
@@ -123,22 +122,50 @@ else
                 printf("%s",buffer);
             }
         if (choice==4)
-        {
-            sprintf(buffer,"what is the name of your channel?\n");
-            printf("%S",buffer);
+           {
+                sprintf(buffer,"what is the name of your channel?\n");
+                printf("%S",buffer);
 
-            fgets(youtube_channel_name,sizeof(youtube_channel_name),stdin);
-            sscanf(youtube_channel_name,"%s",youtube_channel_name);
+                fgets(youtube_channel_name,sizeof(youtube_channel_name),stdin);
+                sscanf(youtube_channel_name,"%s",youtube_channel_name);
 
-            sprintf(buffer,"\nwhat is your income?\n");
-            printf("%s",buffer);
+                sprintf(buffer,"\nwhat is your income?\n");
+                printf("%s",buffer);
 
-            fgets(buffer,sizeof(buffer),stdin);
-            sscanf(buffer,"%d",salary);
+                fgets(buffer,sizeof(buffer),stdin);
+                sscanf(buffer,"%d",salary);
 
-        }
+                sprintf(buffer,"\n do you want to continue with your you tube careerer?\n");
+                sscanf(buffer,"%c",&y_n);
+
+                sprintf(buffer,"your choice is %c",y_n);
+                sprintf("%s",buffer);
+
+           }
+
+         if ( choice == 5)
+         {
+             //printf("Debug, checking ");
+             sprintf(buffer,"\n1.men \n2.women");
+             printf("%s",buffer);
+             sprintf(buffer,"\nEnter you choice\n");
+             printf("%s",buffer);
+             fgets(buffer,3,stdin);
+             sscanf(buffer,"%d",&choice);
+
+         }
+
+
+
+
+
+
+
+
+
+
+
     }
-
 getch();
 }
 /*
