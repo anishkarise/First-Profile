@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 void main ()
-{int age,choice,salary;
+{int age=0,choice=0,salary=0;
  char company_name[20],y_n,school_name[30],hospital_name[30],youtube_channel_name[10],job_name[10],your_name[10];
  char buffer[1024];
 //scanf("%[^\n]%*c",);
@@ -31,7 +31,7 @@ sprintf(buffer,"\nTell me your age?\n");
 printf("%s",buffer);
 
 
-fgets(buffer,3,stdin);
+fgets(buffer,sizeof(buffer),stdin);
 sscanf(buffer,"%d",&age);
 //age=atoi(buffer);
 //scanf("%d",&age);
@@ -48,10 +48,14 @@ if(age<21)
     }
 else
     {// Rest type safing
-        printf("you are big kid you can continue\n\n");
-        printf("what work do you do?\n");
-        printf(" 1.engineer \n 2. doctor \n 3. teacher \n 4. youtuber \n 5. other\n");
-        printf("Enter you choice:");
+        sprintf(buffer,"you are big kid you can continue\n\n");
+        printf("%s",buffer);
+        sprintf(buffer,"what work do you do?\n");
+        printf("%s",buffer);
+        sprintf(buffer," 1.engineer \n 2. doctor \n 3. teacher \n 4. youtuber \n 5. other\n");
+        printf("%s",buffer);
+        sprintf(buffer,"Enter you choice:");
+        printf("%s",buffer);
         //memset(buffer,'\0',sizeof(buffer));
         //buffer[0]='\0';
         //fgets(buffer,3,stdin);
@@ -65,16 +69,28 @@ else
         //choice=1;
         if (choice==1)
             {
-                printf("In which company?\n");
+                sprintf(buffer,"In which company?\n");
+                printf("%s",buffer);
                 //printf("Debug , this is a debug message");
                 //scanf("%s",&company_name);
                 //printf("hello");
                 //scanf("%*[^\n]%*c",company_name);
                 fgets(company_name,sizeof(company_name),stdin);
-                printf("\nwhat is your salary?\n");
-                scanf("%d",&salary);
-                printf("\n do you want to continue with your company?\n");
-                scanf("%c",&y_n);
+                sprintf(buffer,"\nwhat is your salary?\n");
+                printf("%s",buffer);
+
+                fgets(buffer,sizeof(buffer),stdin);
+                sscanf(buffer,"%d",&salary);
+                //scanf("%d",&salary);
+                sprintf(buffer,"\n do you want to continue with your company?\n");
+                printf("%s",buffer);
+
+                fgets(buffer,sizeof(buffer),stdin);
+                sscanf(buffer,"%c",&y_n);
+                //scanf("%c",&y_n);
+
+                sprintf(buffer,"Your choice is %c",y_n);
+                printf("%s",buffer);
 
             }
         if (choice==2)
