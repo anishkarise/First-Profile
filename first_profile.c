@@ -88,14 +88,15 @@ else
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your hospital?");
+                sprintf(buffer,"\n do you want to continue with your company?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%c",&y_n);
 
-                sprintf(buffer,"your choice is %c",y_n);
+                sprintf(buffer,"Your choice is %c",y_n);
                 printf("%s",buffer);
+
 
             }
         if (choice==3)
@@ -107,24 +108,25 @@ else
                 sscanf(school_name,"%s",school_name);
 
                 sprintf(buffer,"\nwhat is your salary?\n");
-                printf("%S",buffer);
+                printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
-                sscanf(buffer,"%d",salary);
+                sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your school?");
+                sprintf(buffer,"\n do you want to continue with your school?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%c",&y_n);
 
-                sprintf(buffer,"your choice is %c",y_n);
+                sprintf(buffer,"Your choice is %c",y_n);
                 printf("%s",buffer);
+
             }
         if (choice==4)
-           {
+            {
                 sprintf(buffer,"what is the name of your channel?\n");
-                printf("%S",buffer);
+                printf("%s",buffer);
 
                 fgets(youtube_channel_name,sizeof(youtube_channel_name),stdin);
                 sscanf(youtube_channel_name,"%s",youtube_channel_name);
@@ -132,30 +134,74 @@ else
                 sprintf(buffer,"\nwhat is your income?\n");
                 printf("%s",buffer);
 
-                fgets(buffer,sizeof(buffer),stdin);
+                fgets(buffer,sizeof(salary),stdin);
                 sscanf(buffer,"%d",salary);
 
-                sprintf(buffer,"\n do you want to continue with your you tube careerer?\n");
+                sprintf(buffer,"\n do you want to continue with your youtube career?\n");
+                printf("%s",buffer);
+
+                fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%c",&y_n);
 
-                sprintf(buffer,"your choice is %c",y_n);
-                sprintf("%s",buffer);
-
-           }
-
-         if ( choice == 5)
-         {
-             //printf("Debug, checking ");
-             sprintf(buffer,"\n1.men \n2.women");
-             printf("%s",buffer);
-             sprintf(buffer,"\nEnter you choice\n");
-             printf("%s",buffer);
-             fgets(buffer,3,stdin);
-             sscanf(buffer,"%d",&choice);
-
-         }
+                sprintf(buffer,"Your choice is %c",y_n);
+                printf("%s",buffer);
 
 
+            }
+
+        if ( choice == 5)
+            {
+                //printf("Debug, checking ");
+                sprintf(buffer,"\n1.men \n2.women");
+                printf("%s",buffer);
+                sprintf(buffer,"\nEnter you choice\n");
+                printf("%s",buffer);
+                fgets(buffer,3,stdin);
+                sscanf(buffer,"%d",&choice);
+
+                if (choice == 1)
+                   {
+                        sprintf(buffer,"job name?\n");
+                        printf("%s",buffer);
+
+                        fgets(job_name,sizeof(job_name),stdin);
+                        sscanf(job_name,"%s",job_name);
+
+                        sprintf(buffer,"name of the company?\n");
+                        printf("%s",buffer);
+
+                        fgets(company_name,sizeof(company_name),stdin);
+                        sscanf(company_name,"%s",company_name);
+
+                        sprintf(buffer,"What is your salary?\n");
+                        printf("%s",buffer);
+
+                        fgets(buffer,sizeof(buffer),stdin);
+                        sscanf(buffer,"%d",salary);
+
+                        sprintf(buffer,"\n do you want to continue with your company?\n");
+                        printf("%s",buffer);
+
+                        fgets(buffer,sizeof(buffer),stdin);
+                        sscanf(buffer,"%c",&y_n);
+
+                        sprintf(buffer,"Your choice is %c",y_n);
+                        printf("%s",buffer);
+
+                        if (choice==2)
+                           {
+                                sprintf(buffer,"\n1.house wife \n2.working woman");
+                                printf("%s",buffer);
+                                sprintf(buffer,"\nEnter you choice\n");
+                                printf("%s",buffer);
+                                fgets(buffer,3,stdin);
+                                sscanf(buffer,"%d",&choice);
+
+                                if (choice==1)
+                                {
+                                    sprintf(buffer,"you are a house wife,sorry can't continue\n");
+                                    printf("%s",buffer);
+                                }
 
 
 
@@ -163,11 +209,16 @@ else
 
 
 
+                            }
+                    }
 
+            }
 
     }
 getch();
 }
+
+
 /*
 hello
 hello
