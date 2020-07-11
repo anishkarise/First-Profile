@@ -64,7 +64,7 @@ else
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your company?\n");
+                sprintf(buffer,"\nDo you want to continue with your company?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
@@ -88,7 +88,7 @@ else
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your company?\n");
+                sprintf(buffer,"\nDo you want to continue with your company?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
@@ -113,7 +113,7 @@ else
                 fgets(buffer,sizeof(buffer),stdin);
                 sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your school?\n");
+                sprintf(buffer,"\nDo you want to continue with your school?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
@@ -135,9 +135,9 @@ else
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(salary),stdin);
-                sscanf(buffer,"%d",salary);
+                sscanf(buffer,"%d",&salary);
 
-                sprintf(buffer,"\n do you want to continue with your youtube career?\n");
+                sprintf(buffer,"\nDo you want to continue with your youtube career?\n");
                 printf("%s",buffer);
 
                 fgets(buffer,sizeof(buffer),stdin);
@@ -177,9 +177,9 @@ else
                         printf("%s",buffer);
 
                         fgets(buffer,sizeof(buffer),stdin);
-                        sscanf(buffer,"%d",salary);
+                        sscanf(buffer,"%d",&salary);
 
-                        sprintf(buffer,"\n do you want to continue with your company?\n");
+                        sprintf(buffer,"\nDo you want to continue with your company?\n");
                         printf("%s",buffer);
 
                         fgets(buffer,sizeof(buffer),stdin);
@@ -187,6 +187,8 @@ else
 
                         sprintf(buffer,"Your choice is %c",y_n);
                         printf("%s",buffer);
+
+                   }
 
                         if (choice==2)
                            {
@@ -203,6 +205,32 @@ else
                                     printf("%s",buffer);
                                 }
 
+                                if (choice==2)
+                                {
+
+
+                                    sprintf(buffer,"what is the name of company?\n");
+                                    printf("%s",buffer);
+
+                                    fgets(company_name,sizeof(company_name),stdin);
+                                    sscanf(company_name,"%s",company_name);
+
+                                    sprintf(buffer,"What is your salary?\n");
+                                    printf("%s",buffer);
+
+                                    fgets(buffer,sizeof(buffer),stdin);
+                                    sscanf(buffer,"%d",&salary);
+
+                                    sprintf(buffer,"\nDo you want to continue with your company?\n");
+                                    printf("%s",buffer);
+
+                                    fgets(buffer,sizeof(buffer),stdin);
+                                    sscanf(buffer,"%c",&y_n);
+
+                                    sprintf(buffer,"Your choice is %c",y_n);
+                                    printf("%s",buffer);
+                                }
+
 
 
 
@@ -210,13 +238,14 @@ else
 
 
                             }
-                    }
-
-            }
+                }
 
     }
+
 getch();
 }
+
+
 
 
 /*
